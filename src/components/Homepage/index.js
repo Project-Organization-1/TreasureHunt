@@ -14,7 +14,7 @@ function Homepage() {
             {/* Footer */}
             <Container fluid id="main">
                 <Row className="pt-2 head">
-                    <img id="logo" src="/logos/VIlogo.jpg"></img>
+                    <img id="logo" src="/logos/VIlogo.jpg" alt="VIIT Logo"></img>
                      <Button variant="secondary" className="login__button">Login</Button>
                 </Row>
                 <Row id="info">
