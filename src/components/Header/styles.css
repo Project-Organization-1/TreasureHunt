@@ -1,0 +1,15 @@
+#logo {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+#login-btn{
+    align-self: flex-end;
+    color: whitesmoke;
+    border-color: whitesmoke;
+}
+
+#login-btn:hover{
+    background-color: aliceblue;
+    color: black;
+}

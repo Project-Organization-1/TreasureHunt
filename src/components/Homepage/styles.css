@@ -26,22 +26,16 @@
 }
 
 #info {
-  margin-top: 20%;
+  /* margin-top: 20%; */
   padding: 0 10%;
 }
 
-#logo {
-  margin-left: 2rem;
-  height: 100px;
-  width: 100px;
-}
-
-#login {
+/* #login {
   color: black;
   font-size: 25px;
   margin-right: 10%;
   margin-top: 2%;
-}
+} */
 
 #videoPlayer {
   justify-content: center;
