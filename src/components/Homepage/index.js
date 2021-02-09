@@ -12,7 +12,7 @@ function Homepage() {
             {/* Video */}
             {/* Login Button */}
             {/* Footer */}
-            <Container id="main">
+            <Container fluid id="main">
                 <Row className="pt-2">
                     <img id="logo" src="/logos/VIlogo.jpg"></img>
                     <a id="login" className="ml-auto" href="#">Login</a>
@@ -24,9 +24,11 @@ function Homepage() {
                     </Col>
                 </Row>
 
-                <ReactPlayer
-                id="videoPlayer"
-                url="https://www.youtube.com/embed/REWoh-3yt28" />
+               <Row id="videoContainer">
+                    <ReactPlayer
+                    id="videoPlayer"
+                    url="https://www.youtube.com/embed/REWoh-3yt28" />
+               </Row>
 
                 <Row id="focus">
                     <Col>

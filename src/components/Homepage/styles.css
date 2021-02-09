@@ -34,6 +34,12 @@
 }
 
 #videoPlayer {
-  margin-left: 20%;
+  justify-content: center;
   margin-top: 20%;
+}
+
+#videoContainer {
+  display: flex;
+  justify-content: center;
+  margin-left: 0;
 }
