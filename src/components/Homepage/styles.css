@@ -19,6 +19,7 @@
 
 .login__button {
   height: 40px;
+  max-width: 80px;
 }
 #focus {
   margin-top: 20%;

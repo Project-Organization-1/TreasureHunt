@@ -35,7 +35,7 @@ function Homepage() {
                         <div className="text-center mt-auto">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Velit dolore amet voluptates id, facere quam optio sint maxime,<br/> voluptatibus pariatur cumque atque rerum iste! Velit.</p>
                             <h1 className="display-5">Start The Hunt!</h1>
-                            <Button variant="secondary">Login</Button>
+                            <Button variant="secondary login__button">Login</Button>
                         </div>
                     </Col>
                 </Row>
