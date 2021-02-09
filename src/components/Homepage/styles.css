@@ -11,6 +11,15 @@
   text-align: center;
 }
 
+.head {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+.login__button {
+  height: 40px;
+}
 #focus {
   margin-top: 20%;
 }

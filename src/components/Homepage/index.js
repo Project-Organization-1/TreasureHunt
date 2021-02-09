@@ -13,9 +13,9 @@ function Homepage() {
             {/* Login Button */}
             {/* Footer */}
             <Container fluid id="main">
-                <Row className="pt-2">
+                <Row className="pt-2 head">
                     <img id="logo" src="/logos/VIlogo.jpg"></img>
-                    <a id="login" className="ml-auto" href="#">Login</a>
+                     <Button variant="secondary" className="login__button">Login</Button>
                 </Row>
                 <Row id="info">
                     <Col className="text-center">
