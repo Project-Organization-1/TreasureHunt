@@ -7,7 +7,7 @@ import ReactPlayer from 'react-player';
 
 function Homepage() {
     return (
-        <div>     
+        <div>       
             {/* Info/ */}
             {/* Video */}
             {/* Login Button */}

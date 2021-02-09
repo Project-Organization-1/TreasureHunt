@@ -1,5 +1,6 @@
+
 import './App.css';
-import Homepage from './components/Homepage/index';
+import Homepage from './components/Homepage';
 
 function App() {
   return (
@@ -8,5 +9,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
