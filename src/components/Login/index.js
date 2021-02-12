@@ -9,23 +9,24 @@ function Login() {
     submitUser(gruopId, email);
   }
   function submitUser(groupId,email){
-        fetch("http://localhost:5000/user/add/",
+        fetch(`http://localhost:5000/user/login/Q?gpId=${groupId}&email=${email}`,
         {
-            method: "POST",
+            method: "GET",
             headers: {
                 Accept: "application/json",
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin":true
             },
             mode: "cors",
-            body: JSON.stringify({
-                groupId: groupId,
-                email: email,
-            })
+
+            // body: JSON.stringify({
+            //     groupId: groupId,
+            //     email: email,
+            // })
         })
         .then(()=>{
             // after adding the note, reload the page to reflect the changes
-            console.log("User Added");
+            console.log("User Logged In");
         })
         .catch(err => {
             throw(err)
