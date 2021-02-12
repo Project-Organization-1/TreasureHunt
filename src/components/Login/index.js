@@ -9,7 +9,7 @@ function Login() {
     submitUser(gruopId, email);
   }
   function submitUser(groupId,email){
-        fetch(`http://localhost:5000/user/login/Q?gpId=${groupId}&email=${email}`,
+        fetch(`http://localhost:5000/user/login/${groupId}/${email}`,
         {
             method: "GET",
             headers: {
@@ -24,9 +24,10 @@ function Login() {
             //     email: email,
             // })
         })
-        .then(()=>{
+        .then((res)=>{
             // after adding the note, reload the page to reflect the changes
             console.log("User Logged In");
+            console.log(res)
         })
         .catch(err => {
             throw(err)
