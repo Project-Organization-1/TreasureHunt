@@ -6,9 +6,9 @@ function Login() {
   const [email, setEmail] = useState("");
 
   const handleClick = () => {
-    submitNote(gruopId, email);
+    submitUser(gruopId, email);
   }
-  function submitNote(groupId,email){
+  function submitUser(groupId,email){
         fetch("http://localhost:5000/user/add/",
         {
             method: "POST",
