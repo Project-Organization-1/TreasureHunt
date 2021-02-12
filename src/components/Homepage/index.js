@@ -15,10 +15,10 @@ function Homepage() {
             {/* Footer */}
             <Container fluid id="main">
                 <Row id="info">
-                    <Col className="text-center">
+                    {/* <Col className="text-center"> */}
                         <Card style={{ borderRadius: "3%" }}>
                             <Card.Body>
-                                <Card.Title style={{ fontWeight: "bold" }}>About the Event</Card.Title>
+                                <Card.Title style={{ fontWeight: "bold", textAlign : "center" }}>About the Event</Card.Title>
                                 <Card.Text>
                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Qui atque ipsam odio laboriosam
                                     quis ducimus nemo eveniet odit perspiciatis doloremque dolor fuga alias ratione impedit
@@ -32,7 +32,7 @@ function Homepage() {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                    </Col>
+                    {/* </Col> */}
                 </Row>
 
                 <Row id="videoContainer">
@@ -44,17 +44,18 @@ function Homepage() {
                 </Row>
 
                 <Row id="focus">
-                    <Col className="text-center">
+                    {/* <Col className="text-center"> */}
                         <Card style={{ borderRadius: "3%" }}>
                             <Card.Body>
-                                <Card.Title style={{fontWeight : "bolder", fontSize : "2em"}}>Start The Hunt!</Card.Title>
+                                <Card.Title style={{fontWeight : "bolder", fontSize : "2em", textAlign : "center"}}>Start The Hunt!</Card.Title>
                                 <Card.Text>
                                     Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> Velit dolore amet voluptates id, facere quam optio sint maxime,<br /> voluptatibus pariatur cumque atque rerum iste! Velit.</p>
+                                    the card's content. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                     Velit dolore amet voluptates id, facere quam optio sint maxime,
+                                     voluptatibus pariatur cumque atque rerum iste! Velit.
                                 </Card.Text>
-                                <Link to="/login">
-                                    <Button variant="secondary login__button">Login</Button>
+                                <Link to="/login" style={{display : "flex", justifyContent : "center"}}>
+                                    <Button id="login" variant="secondary login__button">Login</Button>
                                 </Link>
                             </Card.Body>
                         </Card>
@@ -65,7 +66,7 @@ function Homepage() {
                                 <Button variant="secondary login__button">Login</Button>
                             </Link>
                         </div> */}
-                    </Col>
+                    {/* </Col> */}
                 </Row>
 
                 <Container id="footer">
