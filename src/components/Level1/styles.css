@@ -1,0 +1,15 @@
+.header__title {
+  font-size: 24px;
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.header__title:hover {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+#logo {
+  border-radius: 50%;
+  margin-right: 10px;
+}

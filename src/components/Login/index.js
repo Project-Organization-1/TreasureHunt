@@ -1,4 +1,5 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import {Link} from "react-router-dom";
 import "./style.css";
 function Login() { 
 
@@ -25,7 +26,8 @@ function Login() {
         })
         .then(()=>{
             // after adding the note, reload the page to reflect the changes
-            console.log("User Added");
+          console.log("User Logged In");
+          
         })
         .catch(err => {
             throw(err)
@@ -41,7 +43,9 @@ function Login() {
         <label>Email</label>
         <input type="email" required onChange={e => setEmail(e.target.value)} />
         <div className="btnContainer">
-          <button onClick= {handleClick}>Sign In</button>
+          <Link to="/level1">
+            <button onClick= {handleClick}>Sign In</button>
+          </Link>
         </div>
       </div>
     </section>
