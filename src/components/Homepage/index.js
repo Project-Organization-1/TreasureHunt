@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Row, Col, Button, Card } from 'react-bootstrap';
+import { Container, Row, Button, Card } from 'react-bootstrap';
 import './styles.css';
 import ReactPlayer from 'react-player';
 import { Link } from "react-router-dom";

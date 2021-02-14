@@ -1,7 +1,11 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
+<<<<<<< HEAD
 import { Container, Button, Navbar, Row, Col, Card, } from 'react-bootstrap';
+=======
+import { Container,  Navbar } from 'react-bootstrap';
+>>>>>>> aa9d3467f7a96bc57a01238c41a39276b4188e4b
 import {Link} from "react-router-dom";
 
 function Level1() {
@@ -10,7 +14,7 @@ function Level1() {
         <Navbar bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand>
-                    <Link to="/" className="header__title">
+                    {/* <Link to="/" className="header__title"> */}
                     <img
                         id="logo"   
                         alt=""
@@ -20,7 +24,7 @@ function Level1() {
                         className="d-inline-block align-top"
                     />
                 Treasure Hunt
-                        </Link>
+                        {/* </Link> */}
                 </Navbar.Brand>
             </Container>
         </Navbar>
