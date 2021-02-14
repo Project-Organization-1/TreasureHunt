@@ -1,11 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-<<<<<<< HEAD
 import { Container, Button, Navbar, Row, Col, Card, } from 'react-bootstrap';
-=======
-import { Container,  Navbar } from 'react-bootstrap';
->>>>>>> aa9d3467f7a96bc57a01238c41a39276b4188e4b
+
 import {Link} from "react-router-dom";
 
 function Level1() {
@@ -29,24 +26,28 @@ function Level1() {
             </Container>
         </Navbar>
         <Container >
-            <Row className = "mt-5">
+            <h1 className = "mt-5">Images</h1>
+            <Row className = "mt-3">
                 <Col className = "sm-6">
                 <Card style={{ width: '30rem' }}>
-                <Card.Img variant="top" src="images/img1.png" />
+                <Card.Img variant="top" src="images/camp-karnala-1.jpeg" />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
-                  
-                  <Link to="/images/img1.png" target="_blank" download>Download</Link>
+                  <Button variant = "primary">
+                  <Link className = "imgLink" to="/images/camp-karnala-1.jpeg" target="_blank" download>Download</Link>
+                  </Button>                  
                 </Card.Body>
               </Card>
                 </Col>
                 <Col className = "sm-6">
                 <Card style={{ width: '30rem' }}>
-                <Card.Img variant="top" src="images/img2.png" />
+                <Card.Img variant="top" src="images/camp-karnala-1.jpeg" />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   
-                  <Link to="/images/img2.png" target="_blank" download>Download</Link>
+                  <Button variant = "primary">
+                  <Link className = "imgLink" to="/images/camp-karnala-1.jpeg" target="_blank" download>Download</Link>
+                  </Button>    
                 </Card.Body>
               </Card>
                 </Col>
