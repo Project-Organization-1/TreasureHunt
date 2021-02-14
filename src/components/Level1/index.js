@@ -1,11 +1,12 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { Container, Button, Navbar, Nav } from 'react-bootstrap';
+import { Container, Button, Navbar, Row, Col, Card, } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 
 function Level1() {
     return (
+    <div>
         <Navbar bg="dark" variant="dark">
             <Container>
                 <Navbar.Brand>
@@ -22,7 +23,32 @@ function Level1() {
                         </Link>
                 </Navbar.Brand>
             </Container>
-        </Navbar >
+        </Navbar>
+        <Container >
+            <Row className = "mt-5">
+                <Col className = "sm-6">
+                <Card style={{ width: '30rem' }}>
+                <Card.Img variant="top" src="images/img1.png" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  
+                  <Link to="/images/img1.png" target="_blank" download>Download</Link>
+                </Card.Body>
+              </Card>
+                </Col>
+                <Col className = "sm-6">
+                <Card style={{ width: '30rem' }}>
+                <Card.Img variant="top" src="images/img2.png" />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  
+                  <Link to="/images/img2.png" target="_blank" download>Download</Link>
+                </Card.Body>
+              </Card>
+                </Col>
+            </Row>
+        </Container>
+    </div>
     )
 }
 
