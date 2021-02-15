@@ -40,6 +40,7 @@ function Homepage() {
                         // width="100%"
                         // height="100%"
                         id="videoPlayer"
+                        controls="true"
                         url="https://www.youtube.com/embed/REWoh-3yt28" />
                 </Row>
 

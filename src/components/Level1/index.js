@@ -1,7 +1,8 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { Container, Button, Navbar, Row, Col, Card, } from 'react-bootstrap';
+import { Container, Button, Navbar, Row, Col, Card, Accordion, Form } from 'react-bootstrap';
+import ReactPlayer from 'react-player';
 
 import {Link} from "react-router-dom";
 
@@ -25,11 +26,23 @@ function Level1() {
                 </Navbar.Brand>
             </Container>
         </Navbar>
-        <Container >
+        <div id = "input__container">
+        <Form inline>
+        <Form.Group>
+          <Form.Label htmlFor="input__box">Answer</Form.Label>
+          <Form.Control
+            type="answer"
+            className="mx-sm-3"
+            id="input__box"
+          />
+        </Form.Group>
+      </Form>
+        </div>
+        <Container>
             <h1 className = "mt-5">Images</h1>
             <Row className = "mt-3">
-                <Col className = "sm-6">
-                <Card style={{ width: '30rem' }}>
+                <Col className = "md-6 mb-5">
+                <Card>
                 <Card.Img variant="top" src="images/camp-karnala-1.jpeg" />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
@@ -39,8 +52,8 @@ function Level1() {
                 </Card.Body>
               </Card>
                 </Col>
-                <Col className = "sm-6">
-                <Card style={{ width: '30rem' }}>
+                <Col className = "md-6 mb-5">
+                <Card>
                 <Card.Img variant="top" src="images/camp-karnala-1.jpeg" />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
@@ -53,6 +66,31 @@ function Level1() {
                 </Col>
             </Row>
         </Container>
+        <Row className = "mt-5">
+          <Col md={{ span: 6, offset: 3 }}>
+          <Accordion>
+          <Card>
+            <Card.Header>
+              <Accordion.Toggle as={Button} variant="warning" eventKey="1">
+                Clue Here!
+              </Accordion.Toggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="1">
+              <Card.Body className = "text-center">This is a clue...</Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
+          </Col>
+        </Row>
+        <Container>
+        <h1 className = "mt-5">Video</h1>
+        <Row id="videoContainer">
+          <ReactPlayer
+            id="videoPlayer"
+            controls="true"
+            url="https://www.youtube.com/embed/REWoh-3yt28" />
+        </Row>
+        </Container>  
     </div>
     )
 }
