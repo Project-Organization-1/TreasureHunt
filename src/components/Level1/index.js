@@ -1,11 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-<<<<<<< HEAD
-import { Container, Button, Navbar, Row, Col, Card, } from 'react-bootstrap';
-=======
-import { Container,  Navbar } from 'react-bootstrap';
->>>>>>> aa9d3467f7a96bc57a01238c41a39276b4188e4b
+import { Container, Navbar, Row, Col, Card, } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 
 function Level1() {
