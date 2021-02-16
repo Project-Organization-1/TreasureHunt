@@ -40,4 +40,19 @@
 #input__box {
   width: 12rem;
   height: 2.5rem;
+  align-self: center;
 }
+
+.download__button {
+  width: fit-content;
+}
+
+#submit__button {
+  margin-top: 1rem;
+  width: fit-content;
+  align-self: center;
+}
+
+/* .card__image {
+  max-width: 24rem;
+} */

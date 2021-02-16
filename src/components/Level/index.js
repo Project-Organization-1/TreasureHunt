@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'font-awesome/css/font-awesome.min.css';
 import "./styles.css";
 
 import {
@@ -44,31 +45,32 @@ function Level({
           </Navbar.Brand>
         </Container>
       </Navbar>
-      <div id="input__container">
-        <Form inline>
+      <Container >
+        <Form id="input__container">
           <Form.Group>
             <Form.Label htmlFor="input__box">Answer</Form.Label>
-            <Form.Control type="answer" className="mx-sm-3" id="input__box" />
+            <Form.Control type="text" className="mx-sm-3" id="input__box" />
           </Form.Group>
+          <Button id="submit__button" variant="secondary">Submit</Button>
         </Form>
-      </div>
+      </Container>
       {img1True && (
         <Container>
           <h1 className="mt-5">Image 1</h1>
           <Row className="mt-3">
-            <Col className="md-6 mb-5">
+            <Col className="mb-5" md={{ span: 6, offset: 3 }}>
               <Card>
                 <Card.Img variant="top" src={img1Path} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
-                  <Button variant="primary">
+                  <Button className="download__button" variant="primary">
                     <Link
                       className="imgLink"
                       to={img1Path}
                       target="_blank"
                       download
                     >
-                      Download
+                      Download <i class="fa fa-download" aria-hidden="true"></i>
                     </Link>
                   </Button>
                 </Card.Body>
@@ -81,20 +83,20 @@ function Level({
         <Container>
           <h1 className="mt-5">Image 1</h1>
           <Row className="mt-3">
-            <Col className="md-6 mb-5">
+            <Col className="mb-5" md={{ span: 6, offset: 3 }}>
               <Card>
                 <Card.Img variant="top" src={img2Path} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
 
-                  <Button variant="primary">
+                  <Button className="download__button" variant="primary">
                     <Link
                       className="imgLink"
                       to={img2Path}
                       target="_blank"
                       download
                     >
-                      Download
+                      Download <i class="fa fa-download" aria-hidden="true"></i>
                     </Link>
                   </Button>
                 </Card.Body>
