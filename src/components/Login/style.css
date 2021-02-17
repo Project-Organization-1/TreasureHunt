@@ -32,6 +32,9 @@ button {
   display: flex;
 }
 
+.__warning{
+  color: red;
+}
 .login .loginContainer {
   padding: 60px;
   margin: auto;
