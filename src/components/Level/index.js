@@ -70,7 +70,7 @@ function Level({
                       target="_blank"
                       download
                     >
-                      Download <i class="fa fa-download" aria-hidden="true"></i>
+                      Download <i className="fa fa-download" aria-hidden="true"></i>
                     </Link>
                   </Button>
                 </Card.Body>
@@ -96,7 +96,7 @@ function Level({
                       target="_blank"
                       download
                     >
-                      Download <i class="fa fa-download" aria-hidden="true"></i>
+                      Download <i className="fa fa-download" aria-hidden="true"></i>
                     </Link>
                   </Button>
                 </Card.Body>

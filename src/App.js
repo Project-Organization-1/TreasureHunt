@@ -7,13 +7,17 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  Redirect,
 } from "react-router-dom";
 
 function App() {
+
+  // const token = window.localStorage.getItem("token");
+  
   return (
     <Router>
       <div className="App">
-        <Switch> 
+        <Switch>
           <Route path="/login">
             <Login/>
           </Route>
