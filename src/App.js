@@ -1,20 +1,27 @@
-import "./App.css";
-import Header from "./components/Header/index";
-import Homepage from "./components/Homepage/index";
-import Login from "./components/Login/index";
-import Level1 from "./components/Level1/index";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useState } from "react";
-function App() {
-  const [authorised, setAuthorised] = useState(false);
 
+import './App.css';
+import Header from './components/Header/index';
+import Homepage from './components/Homepage/index';
+import Login from './components/Login/index';
+import Level1 from './components/Level1/index';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+
+function App() {
+
+  // const token = window.localStorage.getItem("token");
+  
   return (
     <Router>
       <div className="App">
         <Switch>
-          {console.log(authorised)}
-          <Route path="/login/level1">
-            <Level1 />
+
+          <Route path="/login">
+            <Login/>
           </Route>
 
           <Route path="/login">

@@ -1,41 +1,59 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, Redirect } from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
+import jwt_decode from "jwt-decode";
+
 function Login() {
   const [groupId, setGruopId] = useState("");
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState(false);
   const [valid, setValid] = useState(false);
 
-  useEffect(() => {
-    function submitUser(groupId, email) {
-      fetch(`http://localhost:5000/user/login/${groupId}/${email}`, {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": true,
-        },
-        mode: "cors",
+  // useEffect(() => {
+  function submitUser(groupId, email) {
+    fetch(`http://localhost:5000/user/login/${groupId}/${email}`, {
+      method: "GET",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": true,
+      },
+      mode: "cors",
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          setValid(true);
+        } else {
+          setValid(false);
+        }
+        setStatus(res.status);
+        return res.json();
       })
-        .then((res) => {
-          if (res.status === 200) {
-            setValid(true);
-          } else {
-            setValid(false);
-          }
-          return setStatus(res.status);
-        })
-        .catch((err) => {
-          setStatus(err.status);
-          throw err;
-        });
-    }
+      .then((resJson) => {
+        return resJson.token;
+      })
+      .then((token) => {
+        window.localStorage.setItem("token", token);
+        console.log(window.localStorage.getItem("token"))
+        return (
+            <Redirect to = "/level1"/>
+          )  
+      })
+      .catch((err) => {
+        setStatus(err.status);
+        throw err;
+      });
+  }
+  // }, [email, groupId]);
 
-    submitUser(groupId, email);
-  }, [email, groupId]);
+  function decodeJWT() {
+    var token = window.localStorage.getItem("token")
+    var decoded = jwt_decode(token);
+    console.log(decoded);
+  }
 
-  return (
+
+  return (  
     <section className="login">
       <div className="loginContainer">
         <h3>Log In</h3>
@@ -55,9 +73,12 @@ function Login() {
         />
         {status === 202 && <p className="__warning">User Not found</p>}
         <div className="btnContainer">
-          <Link to="/login/level1">
-            <button disabled={!valid}>Sign In</button>
-          </Link>
+
+          {/* <Link to="/level1"> disabled={!valid} */}
+            <button  onClick={() => submitUser(groupId, email)}>
+              Sign In
+            </button>
+          {/* </Link> */}
         </div>
       </div>
     </section>

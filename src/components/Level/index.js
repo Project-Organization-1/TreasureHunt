@@ -63,7 +63,7 @@ function Level({ img1Path, img2Path, clue, videourl}) {
                       target="_blank"
                       download
                     >
-                      Download <i class="fa fa-download" aria-hidden="true"></i>
+                      Download <i className="fa fa-download" aria-hidden="true"></i>
                     </Link>
                   </Button>
                 </Card.Body>
@@ -89,7 +89,7 @@ function Level({ img1Path, img2Path, clue, videourl}) {
                       target="_blank"
                       download
                     >
-                      Download <i class="fa fa-download" aria-hidden="true"></i>
+                      Download <i className="fa fa-download" aria-hidden="true"></i>
                     </Link>
                   </Button>
                 </Card.Body>
