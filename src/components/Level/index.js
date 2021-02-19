@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "font-awesome/css/font-awesome.min.css";
 import "./styles.css";
@@ -6,7 +6,6 @@ import "./styles.css";
 import {
   Container,
   Button,
-  Navbar,
   Row,
   Col,
   Card,
@@ -14,28 +13,17 @@ import {
   Form,
 } from "react-bootstrap";
 import ReactPlayer from "react-player";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
 function Level({ img1Path, img2Path, clue, videourl}) {
+  const {token, setToken} = useContext(UserContext);
+
+  if(token == null){
+    return <Redirect to="/"/>
+  }
   return (
     <div>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand>
-            {/* <Link to="/" className="header__title"> */}
-            <img
-              id="logo"
-              alt=""
-              src="/logos/VIlogo.jpg"
-              width="40"
-              height="40"
-              className="d-inline-block align-top"
-            />
-            Treasure Hunt
-            {/* </Link> */}
-          </Navbar.Brand>
-        </Container>
-      </Navbar>
       <Container>
         <Form id="input__container">
           <Form.Group>

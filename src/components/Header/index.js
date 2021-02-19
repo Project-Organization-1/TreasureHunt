@@ -1,32 +1,47 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { Container, Button, Navbar, Nav } from 'react-bootstrap';
-import {Link} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { UserContext } from '../UserContext';
 
 function Header() {
+    const { token, setToken } = useContext(UserContext);
+    let history = useHistory();
+
+    function logout(){
+        window.localStorage.removeItem("token");
+        setToken(null);
+        history.push('/');
+    }
+
     return (
-        <Navbar bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand>
-                    <Link to="/" className="header__title">
-                    <img
-                        id="logo"   
-                        alt=""
-                        src="/logos/VIlogo.jpg"
-                        width="40"
-                        height="40"
-                        className="d-inline-block align-top"
-                    />
-                Treasure Hunt
-                        </Link>
-                </Navbar.Brand>
-                <Nav.Item className="ml-auto">
-                    <Link to="/login">
-                        <Button id="login-btn" variant="outline-dark">Login</Button>
-                    </Link>
-                </Nav.Item>
-            </Container>
+        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" fluid>
+            <Navbar.Brand>
+                <Link to="/" className="header__title" style={{display: 'flex'}}>
+                    <div style={{display: 'flex'}}>
+                        <img
+                            id="logo"
+                            alt="VIIT Logo"
+                            src="/logos/VIlogo.jpg"
+                            width="40"
+                            height="40"
+                            className="d-inline-block align-top"
+                        />
+                        <div>Treasure Hunt</div>
+                    </div>
+                </Link>
+            </Navbar.Brand>
+
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+
+            <Navbar.Collapse id="responsive-navbar-nav" className='justify-content-end'>
+                {token === null ? <Nav>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                </Nav> : <Nav>
+                    <Nav.Link href="#" onClick={() => logout()}>Logout</Nav.Link>
+                </Nav>}
+            </Navbar.Collapse>
         </Navbar >
     )
 }

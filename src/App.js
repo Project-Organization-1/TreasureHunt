@@ -10,28 +10,30 @@ import {
   Route,
   Redirect,
 } from "react-router-dom";
+import { useState } from 'react';
+import { UserContext } from './components/UserContext';
 
 function App() {
 
-  // const token = window.localStorage.getItem("token");
-  
+  const [token, setToken] = useState(window.localStorage.getItem("token"));
+
   return (
     <Router>
       <div className="App">
-        <Switch>
-
-          <Route path="/login">
-            <Login/>
-          </Route>
-
-          <Route path="/login">
-            <Login  setAuthorised />
-          </Route>
-          <Route path="/">
-            <Header />
-            <Homepage />
-          </Route>
-        </Switch>
+        <UserContext.Provider value={{ token, setToken }}>
+          <Header />
+          <Switch>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route exact path="/level1">
+              <Level1 />
+            </Route>
+            <Route exact path="/">
+              <Homepage />
+            </Route>
+          </Switch>
+        </UserContext.Provider>
       </div>
     </Router>
   );

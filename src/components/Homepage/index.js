@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container, Row, Button, Card } from "react-bootstrap";
 import "./styles.css";
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
-// import VIlogo from '';
+import { UserContext } from "../UserContext";
 
 function Homepage() {
+  const {token, setToken} = useContext(UserContext);
+
   return (
     <div>
-      {/* Info/ */}
-      {/* Video */}
-      {/* Login Button */}
-      {/* Footer */}
       <Container fluid id="main">
         <Row id="info">
           {/* <Col className="text-center"> */}
@@ -72,23 +70,16 @@ function Homepage() {
                 atque rerum iste! Velit.
               </Card.Text>
               <Link
+                id="login-link"
                 to="/login"
-                style={{ display: "flex", justifyContent: "center" }}
+                style={{ display: "flex"}}
               >
-                <Button id="login" variant="secondary login__button">
-                  Login
+                <Button id="login" variant="secondary">
+                  {token === null ? "Login" : "Start / Resume"}
                 </Button>
               </Link>
             </Card.Body>
           </Card>
-          {/* <div className="text-center mt-auto">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br /> Velit dolore amet voluptates id, facere quam optio sint maxime,<br /> voluptatibus pariatur cumque atque rerum iste! Velit.</p>
-                            <h1 className="display-5">Start The Hunt!</h1>
-                            <Link to="/login">
-                                <Button variant="secondary login__button">Login</Button>
-                            </Link>
-                        </div> */}
-          {/* </Col> */}
         </Row>
 
         <Container id="footer">
