@@ -1,6 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import 'font-awesome/css/font-awesome.min.css';
+import "font-awesome/css/font-awesome.min.css";
 import "./styles.css";
 
 import {
@@ -16,16 +16,7 @@ import {
 import ReactPlayer from "react-player";
 import { Link } from "react-router-dom";
 
-function Level({
-  img1True,
-  img1Path,
-  img2True,
-  img2Path,
-  clueTrue,
-  clue,
-  videoTrue,
-  videourl,
-}) {
+function Level({ img1Path, img2Path, clue, videourl}) {
   return (
     <div>
       <Navbar bg="dark" variant="dark">
@@ -45,16 +36,18 @@ function Level({
           </Navbar.Brand>
         </Container>
       </Navbar>
-      <Container >
+      <Container>
         <Form id="input__container">
           <Form.Group>
             <Form.Label htmlFor="input__box">Answer</Form.Label>
             <Form.Control type="text" className="mx-sm-3" id="input__box" />
           </Form.Group>
-          <Button id="submit__button" variant="secondary">Submit</Button>
+          <Button id="submit__button" variant="secondary">
+            Submit
+          </Button>
         </Form>
       </Container>
-      {img1True && (
+      {img1Path && (
         <Container>
           <h1 className="mt-5">Image 1</h1>
           <Row className="mt-3">
@@ -79,7 +72,7 @@ function Level({
           </Row>
         </Container>
       )}
-      {img2True && (
+      {img2Path && (
         <Container>
           <h1 className="mt-5">Image 1</h1>
           <Row className="mt-3">
@@ -105,7 +98,7 @@ function Level({
           </Row>
         </Container>
       )}
-      {clueTrue && (
+      {clue && (
         <Row className="mt-5">
           <Col md={{ span: 6, offset: 3 }}>
             <Accordion>
@@ -123,7 +116,7 @@ function Level({
           </Col>
         </Row>
       )}
-      {videoTrue && (
+      {videourl && (
         <Container>
           <h1 className="mt-5">Video</h1>
           <Row id="videoContainer">

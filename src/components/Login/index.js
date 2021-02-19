@@ -34,7 +34,7 @@ function Login() {
 
     submitUser(groupId, email);
   }, [email, groupId]);
-  
+
   return (
     <section className="login">
       <div className="loginContainer">
@@ -55,10 +55,8 @@ function Login() {
         />
         {status === 202 && <p className="__warning">User Not found</p>}
         <div className="btnContainer">
-          <Link to="/level1">
-            <button  disabled={!valid}>
-              Sign In
-            </button>
+          <Link to="/login/level1">
+            <button disabled={!valid}>Sign In</button>
           </Link>
         </div>
       </div>

@@ -6,14 +6,7 @@ function index() {
   const videourl = "https://www.youtube.com/embed/REWoh-3yt28";
   return (
     <div>
-      <Level
-        img1True
-        img1Path={imgPath}
-        videoTrue
-        videourl={videourl}
-        clueTrue
-        clue={clue}
-      />
+      <Level img1Path={imgPath} videourl={videourl} clue={clue} />
     </div>
   );
 }
