@@ -1,9 +1,8 @@
-
 import './App.css';
 import Header from './components/Header/index';
 import Homepage from './components/Homepage/index';
 import Login from './components/Login/index';
-import Level1 from './components/Level1/index';
+import Level from './components/Level/index';
 import {
   BrowserRouter as Router,
   Switch,
@@ -26,8 +25,8 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
-            <Route exact path="/level1">
-              <Level1 />
+            <Route exact path="/level">
+              <Level />
             </Route>
             <Route exact path="/">
               <Homepage />
