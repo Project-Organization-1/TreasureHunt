@@ -11,9 +11,9 @@ function Level1() {
     return (
         <div>
             <SubmitBoxComponent />
-            <ImageComponent imgPath ={imgPath} />
+            <ImageComponent imgPath = {imgPath} />
             <ClueComponent  clue = {clue}/>
-            <VideoComponent videourl={ videourl}/>
+            <VideoComponent videourl= {videourl}/>
         </div>
     )
 }

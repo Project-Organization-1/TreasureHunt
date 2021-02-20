@@ -25,7 +25,7 @@ function App() {
             <Route exact path="/login">
               <Login />
             </Route>
-            <Route exact path="/level">
+            <Route exact path="/level1">
               <Level />
             </Route>
             <Route exact path="/">

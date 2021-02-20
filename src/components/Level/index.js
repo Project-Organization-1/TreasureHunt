@@ -13,7 +13,7 @@ function Level() {
     return <Redirect to="/"/>
   }
   return (
-    <Level1/>
+    <Level1 />
   );
 }
 
