@@ -10,13 +10,13 @@ function Header() {
     let history = useHistory();
 
     function logout(){
+        history.push('/');
         window.localStorage.removeItem("token");
         setToken(null);
-        history.push('/');
     }
 
     return (
-        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark" fluid>
+        <Navbar collapseOnSelect expand="sm" bg="dark" variant="dark">
             <Navbar.Brand>
                 <Link to="/" className="header__title" style={{display: 'flex'}}>
                     <div style={{display: 'flex'}}>
@@ -39,7 +39,7 @@ function Header() {
                 {token === null ? <Nav>
                     <Nav.Link href="/login">Login</Nav.Link>
                 </Nav> : <Nav>
-                    <Nav.Link href="#" onClick={() => logout()}>Logout</Nav.Link>
+                    <Nav.Link href='/' onClick={() => logout()}>Logout</Nav.Link>
                 </Nav>}
             </Navbar.Collapse>
         </Navbar >

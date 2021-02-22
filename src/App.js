@@ -22,13 +22,13 @@ function App() {
         <UserContext.Provider value={{ token, setToken }}>
           <Header />
           <Switch>
-            <Route exact path="/login">
+            <Route path="/login">
               <Login />
             </Route>
-            <Route exact path="/level1">
+            <Route path="/level1">
               <Level />
             </Route>
-            <Route exact path="/">
+            <Route path="/">
               <Homepage />
             </Route>
           </Switch>
